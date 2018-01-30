@@ -1,4 +1,5 @@
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -23,10 +24,10 @@ public class KeyEventTester extends JFrame {
 
         keyPanel.addKeyListener(new KeyObserver());
         Container contentPane = getContentPane();
-        contentPane.add(keyPanel, "Center");
+        contentPane.add(keyPanel, BorderLayout.CENTER);
         
         JButton b = new JButton("Press me to confuse focusable!");
-        contentPane.add(b, "South");
+        contentPane.add(b, BorderLayout.SOUTH);
         // The button will receive all key events once you click on it
         // Uncomment the following line to avoid it
         //b.setFocusable(false);
